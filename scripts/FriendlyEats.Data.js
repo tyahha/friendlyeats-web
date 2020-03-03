@@ -13,12 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-'use strict';
+"use strict";
 
 FriendlyEats.prototype.addRestaurant = function(data) {
-  /*
-    TODO: Implement adding a document
-  */
+  var collection = firebase.firestore().collection("restaurants");
+  return collection.add(data);
 };
 
 FriendlyEats.prototype.getAllRestaurants = function(renderer) {
